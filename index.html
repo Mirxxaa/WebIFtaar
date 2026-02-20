@@ -58,7 +58,6 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Animation */
         .menu-transition-container {
             transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s ease;
         }
@@ -76,7 +75,8 @@
             width: 44px;
             height: 44px;
         }
-        .nav-handle:hover { background: rgba(197, 160, 89, 0.1); color: #f3d693; }
+        .nav-handle:hover:not(:disabled) { background: rgba(197, 160, 89, 0.1); color: #f3d693; }
+        .nav-handle:disabled { opacity: 0.1; cursor: not-allowed; }
 
         .category-line {
             display: flex;
@@ -111,7 +111,9 @@
                 <button onclick="toggleLanguage()" id="lang-btn" class="text-[10px] tracking-widest border border-gold/30 text-gold px-4 py-1.5 rounded-full hover:bg-gold hover:text-brand transition-all font-bold uppercase">العربية</button>
                 <button id="dl-btn" onclick="downloadPDF()" class="text-[10px] tracking-widest bg-gold text-brand px-4 py-1.5 rounded-full hover:bg-gold-light transition-all font-bold uppercase">DOWNLOAD PDF</button>
             </div>
-            <input type="date" id="date-picker" class="bg-transparent text-gold text-xs border-b border-gold/30 px-2 py-1 outline-none focus:border-gold cursor-pointer">
+            <input type="date" id="date-picker" 
+                   min="2026-02-18" max="2026-03-20"
+                   class="bg-transparent text-gold text-xs border-b border-gold/30 px-2 py-1 outline-none focus:border-gold cursor-pointer">
         </div>
     </nav>
 
@@ -123,7 +125,7 @@
         </div>
 
         <div class="flex items-center justify-between px-2 mb-4">
-            <button onclick="changeDate(-1)" class="nav-handle text-gold/40 hover:text-gold">
+            <button id="prev-btn" onclick="changeDate(-1)" class="nav-handle text-gold/40 hover:text-gold">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" />
                 </svg>
@@ -134,7 +136,7 @@
                 <h1 id="selected-day-name" class="font-serif text-3xl md:text-4xl gold-gradient-text uppercase tracking-widest min-h-[1.2em]">---</h1>
             </div>
 
-            <button onclick="changeDate(1)" class="nav-handle text-gold/40 hover:text-gold">
+            <button id="next-btn" onclick="changeDate(1)" class="nav-handle text-gold/40 hover:text-gold">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
                 </svg>
@@ -149,19 +151,19 @@
         </div>
 
         <div class="mt-12 pt-8 border-t border-gold/10 flex flex-col md:flex-row justify-between items-center gap-6 px-8">
-    <div class="text-center md:text-left">
-        <p class="text-gold/40 text-[8px] uppercase tracking-[0.3em] mb-2">Reservations</p>
-        <div class="flex flex-col gap-1">
-            <a href="tel:+966570057571" class="text-gold font-serif text-sm tracking-widest hover:text-gold-light transition-colors" dir="ltr">
-                +966 57 00 57 57 1
-            </a>
-            <a href="tel:+966570157571" class="text-gold font-serif text-sm tracking-widest hover:text-gold-light transition-colors" dir="ltr">
-                +966 57 01 57 57 1
-            </a>
+            <div class="text-center md:text-left">
+                <p class="text-gold/40 text-[8px] uppercase tracking-[0.3em] mb-2">Reservations</p>
+                <div class="flex flex-col gap-1">
+                    <a href="tel:+966570057571" class="text-gold font-serif text-sm tracking-widest hover:text-gold-light transition-colors" dir="ltr">
+                        +966 57 00 57 57 1
+                    </a>
+                    <a href="tel:+966570157571" class="text-gold font-serif text-sm tracking-widest hover:text-gold-light transition-colors" dir="ltr">
+                        +966 57 01 57 57 1
+                    </a>
+                </div>
+            </div>
+            <p class="text-gold/30 text-[9px] font-serif italic">@zafranvalley</p>
         </div>
-    </div>
-    <p class="text-gold/30 text-[9px] font-serif italic">@zafranvalley</p>
-</div>
     </div>
 
     <script>
@@ -169,14 +171,23 @@
         let lang = 'en';
         let currentDate = new Date('2026-02-18');
         const RAMADAN_START = new Date('2026-02-18T00:00:00');
+        const RAMADAN_END = new Date('2026-03-20T23:59:59');
 
         document.addEventListener('DOMContentLoaded', async () => {
             try {
-                const res = await fetch('menu.json');
+                const res = await fetch('./menu.json');
                 const data = await res.json();
                 fullMenu = data.days;
+                
+                // Set initial date to today if within range, otherwise start date
+                const today = new Date();
+                if (today >= RAMADAN_START && today <= RAMADAN_END) {
+                    currentDate = today;
+                }
+                
                 updateUI();
             } catch (e) { console.error("Data missing"); }
+            
             document.getElementById('date-picker').addEventListener('change', (e) => {
                 currentDate = new Date(e.target.value);
                 updateUI();
@@ -184,12 +195,18 @@
         });
 
         function changeDate(days) {
+            const nextDate = new Date(currentDate);
+            nextDate.setDate(currentDate.getDate() + days);
+
+            // Prevent navigation outside range
+            if (nextDate < RAMADAN_START || nextDate > RAMADAN_END) return;
+
             const wrapper = document.getElementById('menu-transition-wrapper');
             wrapper.classList.remove('slide-in-view');
             wrapper.classList.add(days > 0 ? 'slide-out-left' : 'slide-out-right');
 
             setTimeout(() => {
-                currentDate.setDate(currentDate.getDate() + days);
+                currentDate = nextDate;
                 updateUI();
                 wrapper.classList.remove('slide-out-left', 'slide-out-right');
                 wrapper.classList.add('slide-in-view');
@@ -199,18 +216,26 @@
         function updateUI() {
             const dateStr = currentDate.toISOString().split('T')[0];
             document.getElementById('date-picker').value = dateStr;
-            const diffDays = Math.floor((currentDate - RAMADAN_START) / (1000 * 60 * 60 * 24));
             
-            if (diffDays < 0) {
-                document.getElementById('selected-day-name').textContent = lang === 'en' ? "Upcoming" : "قريباً";
-                document.getElementById('menu-content').innerHTML = '<div class="text-center py-20 text-gold/20 italic">Menu begins Feb 18th</div>';
+            // Disable arrows at boundaries
+            document.getElementById('prev-btn').disabled = (currentDate <= RAMADAN_START);
+            document.getElementById('next-btn').disabled = (currentDate >= RAMADAN_END);
+
+            const container = document.getElementById('menu-content');
+            
+            // Final check for date limits
+            if (currentDate < RAMADAN_START || currentDate > RAMADAN_END) {
+                document.getElementById('selected-day-name').textContent = lang === 'en' ? "Closed" : "مغلق";
+                container.innerHTML = `<div class="text-center py-20 text-gold/20 italic">
+                    ${lang === 'en' ? 'Ramadan Season Ended' : 'انتهى موسم رمضان'}
+                </div>`;
                 return;
             }
 
+            const diffDays = Math.floor((currentDate - RAMADAN_START) / (1000 * 60 * 60 * 24));
             const dayIndex = diffDays % 7;
             document.getElementById('selected-day-name').textContent = currentDate.toLocaleDateString(lang === 'en' ? 'en-US' : 'ar-SA', { weekday: 'long' });
             
-            const container = document.getElementById('menu-content');
             container.innerHTML = '';
             fullMenu[dayIndex].categories.forEach((cat) => {
                 const title = lang === 'en' ? cat.title.en : cat.title.ar;
