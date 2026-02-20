@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zafran Valley - Ramadan 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#050505',
+                        gold: { light: '#f3d693', DEFAULT: '#c5a059', dark: '#8a6d3b' }
+                    },
+                    fontFamily: { serif: ['Cinzel', 'serif'], arabic: ['Cairo', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            background-image: radial-gradient(circle at center, #15120e 0%, #050505 100%);
+            color: #e5e5e5;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .glass-header {
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        #menu-card {
+            background-color: #0a0a0a;
+            border: 1px solid rgba(197, 160, 89, 0.1);
+        }
+
+        .arch-container {
+            border: 2px solid #c5a059;
+            border-bottom: none;
+            border-radius: 100% 100% 0 0 / 25% 25% 0 0;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(to bottom, #f3d693, #c5a059, #8a6d3b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Animation */
+        .menu-transition-container {
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s ease;
+        }
+        .slide-out-left { transform: translateX(-20px); opacity: 0; }
+        .slide-out-right { transform: translateX(20px); opacity: 0; }
+        .slide-in-view { transform: translateX(0); opacity: 1; }
+
+        .nav-handle {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+        }
+        .nav-handle:hover { background: rgba(197, 160, 89, 0.1); color: #f3d693; }
+
+        .category-line {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #c5a059;
+            margin: 2rem 0 0.75rem 0;
+        }
+
+        .item-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: #d1d1d1;
+        }
+
+        .item-list span:not(:last-child)::after {
+            content: "•";
+            margin-left: 10px;
+            color: #8a6d3b;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body class="pb-12">
+
+    <nav class="glass-header mb-8 px-4 py-3">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <button onclick="toggleLanguage()" id="lang-btn" class="text-[10px] tracking-widest border border-gold/30 text-gold px-4 py-1.5 rounded-full hover:bg-gold hover:text-brand transition-all font-bold uppercase">العربية</button>
+                <button id="dl-btn" onclick="downloadPDF()" class="text-[10px] tracking-widest bg-gold text-brand px-4 py-1.5 rounded-full hover:bg-gold-light transition-all font-bold uppercase">DOWNLOAD PDF</button>
+            </div>
+            <input type="date" id="date-picker" class="bg-transparent text-gold text-xs border-b border-gold/30 px-2 py-1 outline-none focus:border-gold cursor-pointer">
+        </div>
+    </nav>
+
+    <div id="menu-card" class="max-w-2xl mx-auto shadow-2xl relative overflow-hidden pb-16 px-4 md:px-12">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold to-transparent opacity-40"></div>
+
+        <div class="flex justify-center pt-12 mb-8">
+            <img src="logo.png" alt="Zafran Valley Logo" class="h-24 md:h-28 object-contain">
+        </div>
+
+        <div class="flex items-center justify-between px-2 mb-4">
+            <button onclick="changeDate(-1)" class="nav-handle text-gold/40 hover:text-gold">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+
+            <div class="text-center flex-1">
+                <p class="text-gold tracking-[0.3em] text-[8px] uppercase mb-2 opacity-60">The Grand Iftaar Buffet</p>
+                <h1 id="selected-day-name" class="font-serif text-3xl md:text-4xl gold-gradient-text uppercase tracking-widest min-h-[1.2em]">---</h1>
+            </div>
+
+            <button onclick="changeDate(1)" class="nav-handle text-gold/40 hover:text-gold">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="arch-container mx-8">
+            <div class="w-12 h-px bg-gold/20 mx-auto mt-6 mb-6"></div>
+            <div id="menu-transition-wrapper" class="menu-transition-container slide-in-view">
+                <div id="menu-content" class="space-y-1 pb-4"></div>
+            </div>
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-gold/10 flex flex-col md:flex-row justify-between items-center gap-6 px-8">
+            <div class="text-center md:text-left">
+                <p class="text-gold/40 text-[8px] uppercase tracking-[0.3em] mb-2">Reservations</p>
+                <p class="text-gold font-serif text-sm tracking-widest">+966 57 00 57 57 1</p>
+            </div>
+            <p class="text-gold/30 text-[9px] font-serif italic">@zafranvalley</p>
+        </div>
+    </div>
+
+    <script>
+        let fullMenu = null;
+        let lang = 'en';
+        let currentDate = new Date('2026-02-18');
+        const RAMADAN_START = new Date('2026-02-18T00:00:00');
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const res = await fetch('menu.json');
+                const data = await res.json();
+                fullMenu = data.days;
+                updateUI();
+            } catch (e) { console.error("Data missing"); }
+            document.getElementById('date-picker').addEventListener('change', (e) => {
+                currentDate = new Date(e.target.value);
+                updateUI();
+            });
+        });
+
+        function changeDate(days) {
+            const wrapper = document.getElementById('menu-transition-wrapper');
+            wrapper.classList.remove('slide-in-view');
+            wrapper.classList.add(days > 0 ? 'slide-out-left' : 'slide-out-right');
+
+            setTimeout(() => {
+                currentDate.setDate(currentDate.getDate() + days);
+                updateUI();
+                wrapper.classList.remove('slide-out-left', 'slide-out-right');
+                wrapper.classList.add('slide-in-view');
+            }, 250);
+        }
+
+        function updateUI() {
+            const dateStr = currentDate.toISOString().split('T')[0];
+            document.getElementById('date-picker').value = dateStr;
+            const diffDays = Math.floor((currentDate - RAMADAN_START) / (1000 * 60 * 60 * 24));
+            
+            if (diffDays < 0) {
+                document.getElementById('selected-day-name').textContent = lang === 'en' ? "Upcoming" : "قريباً";
+                document.getElementById('menu-content').innerHTML = '<div class="text-center py-20 text-gold/20 italic">Menu begins Feb 18th</div>';
+                return;
+            }
+
+            const dayIndex = diffDays % 7;
+            document.getElementById('selected-day-name').textContent = currentDate.toLocaleDateString(lang === 'en' ? 'en-US' : 'ar-SA', { weekday: 'long' });
+            
+            const container = document.getElementById('menu-content');
+            container.innerHTML = '';
+            fullMenu[dayIndex].categories.forEach((cat) => {
+                const title = lang === 'en' ? cat.title.en : cat.title.ar;
+                const itemsHtml = cat.items.map(i => `<span>${lang === 'en' ? i.en : i.ar}</span>`).join('');
+                const section = document.createElement('div');
+                section.innerHTML = `<div class="category-line"><div class="flex-grow border-t border-gold/5"></div>
+                    <span class="px-4 text-[10px] font-serif tracking-[0.2em] font-bold uppercase gold-gradient-text">${title}</span>
+                    <div class="flex-grow border-t border-gold/5"></div></div>
+                    <div class="item-list px-4 text-center ${lang === 'en' ? 'font-sans' : 'font-arabic'}">${itemsHtml}</div>`;
+                container.appendChild(section);
+            });
+        }
+
+        function toggleLanguage() {
+            lang = lang === 'en' ? 'ar' : 'en';
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            document.getElementById('lang-btn').textContent = lang === 'en' ? 'العربية' : 'English';
+            updateUI();
+        }
+
+        async function downloadPDF() {
+            const btn = document.getElementById('dl-btn');
+            const originalCard = document.getElementById('menu-card');
+            const dayName = document.getElementById('selected-day-name').textContent;
+            btn.textContent = "...";
+
+            const tempContainer = document.createElement('div');
+            tempContainer.style.position = 'fixed'; tempContainer.style.left = '-9999px'; tempContainer.style.width = '800px';
+            const clone = originalCard.cloneNode(true);
+            clone.style.width = '800px';
+            clone.querySelectorAll('.nav-handle').forEach(h => h.remove());
+            
+            tempContainer.appendChild(clone);
+            document.body.appendChild(tempContainer);
+
+            try {
+                await html2pdf().set({
+                    margin: 0.2, filename: `Zafran_Valley_${dayName}.pdf`,
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2, useCORS: true, backgroundColor: '#0a0a0a' },
+                    jsPDF: { unit: 'in', format: 'a4' }
+                }).from(clone).save();
+            } finally {
+                document.body.removeChild(tempContainer);
+                btn.textContent = "DOWNLOAD PDF";
+            }
+        }
+    </script>
+</body>
+</html>
