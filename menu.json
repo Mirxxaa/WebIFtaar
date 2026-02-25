@@ -76,6 +76,1349 @@
         { "title": { "en": "Main Course", "ar": "الطبق الرئيسي" }, "items": [ { "en": "Chicken Hyderabadi", "ar": "دجاج حيدرابادي" }, { "en": "Mutton Bhuna Gosht", "ar": "لحم الغنم بُنا جوشت" }, { "en": "Fish In Oyster Sauce", "ar": "سمك بالصوص المحار" }, { "en": "Dal Fry", "ar": "دال فراي (عدس مطبوخ متبل)" }, { "en": "Zafran Special Noodles", "ar": "نودلز زعفران المميزة" }, { "en": "Chicken Biryani", "ar": "برياني دجاج" }, { "en": "Steam Rice", "ar": "أرز مطهو على البخار" }, { "en": "Assorted Breads", "ar": "خبز مشكل" } ] },
         { "title": { "en": "Desserts", "ar": "الحلويات" }, "items": [ { "en": "Vermicelli Kheer", "ar": "شعرية باللبن (خير)" }, { "en": "Shahi Tukda", "ar": "شاي توكدا" }, { "en": "Cream Caramel", "ar": "كريم كراميل" } ] }
       ]
-    }
-  ]
+    },
+  
+  {
+    "day": 8,
+    "categories": [
+      {
+        "title": {"en": "Iftar", "ar": "الإفطار"}, "items": [
+          {
+            "en": "Assorted Fresh Fruits",
+            "ar": "فواكه طازجة متنوعة"
+          },
+          {
+            "en": "Dates",
+            "ar": "بلح"
+          },
+          {
+            "en": "Mix Samosa (Chicken or Vegetable)",
+            "ar": "سمبوسة مشكلة (دجاج أو خضار)"
+          },
+          {
+            "en": "Kibbeh",
+            "ar": "الكبة"
+          },
+          {
+            "en": "Mix Pakoda",
+            "ar": "باكودا مشكله"
+          },
+          {
+            "en": "Spring Roll",
+            "ar": "لفائف الربيع"
+          },
+          {
+            "en": "Vimto",
+            "ar": "فيمتو"
+          },
+          {
+            "en": "Mango Tang",
+            "ar": "مانجو تانج"
+          },
+          {
+            "en": "Rooh Afza",
+            "ar": "روح أفزا"
+          },
+          {
+            "en": "Mix Fruit Juice",
+            "ar": "عصير فواكه مشكلة"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Salads",
+          "ar": "السلطات"
+        },
+        "items": [
+          {
+            "en": "Lebanese Lentil Salad",
+            "ar": "سلطة العدس اللبنانية"
+          },
+          {
+            "en": "Olive And Pickle Platter",
+            "ar": "طبق الزيتون والمخلل"
+          },
+          {
+            "en": "Moroccan Carrot Salad",
+            "ar": "سلطة الجزر المغربية"
+          },
+          {
+            "en": "Potato Dill Salad",
+            "ar": "سلطة البطاطس بالشبت"
+          },
+          {
+            "en": "Avocado Corn Salad",
+            "ar": "سلطة الذرة والأفوكادو"
+          },
+          {
+            "en": "Hummus Beiruti",
+            "ar": "حمص بيروتي"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Soup",
+          "ar": "الشوربات"
+        },
+        "items": [
+          {
+            "en": "Manchow Soup Chicken",
+            "ar": "شوربة مانشو بالدجاج"
+          },
+          {
+            "en": "Cream of Mushroom Soup",
+            "ar": "شوربة كريمة بالفطر"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Starters",
+          "ar": "المقبلات"
+        },
+        "items": [
+          {
+            "en": "Zafrani Chicken Tikka",
+            "ar": "دجاج تيكا زعفراني"
+          },
+          {
+            "en": "Mutton Seekh Kabab",
+            "ar": "كباب سيخ لحم الضأن"
+          },
+          {
+            "en": "Fish Finger",
+            "ar": "أصابع السمك"
+          },
+          {
+            "en": "Chicken Majestic",
+            "ar": "دجاج ماجستيكس"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Main Course",
+          "ar": "الطبق الرئيسي"
+        },
+        "items": [
+          {
+            "en": "Murg Saag Wala",
+            "ar": "مورغ ساج والا"
+          },
+          {
+            "en": "Aloo Gosht",
+            "ar": "ألو جوشت"
+          },
+          {
+            "en": "Fish in Garlic Sauce",
+            "ar": "سمك بصلصة الثوم"
+          },
+          {
+            "en": "Punjabi Dal Tadka",
+            "ar": "دال تادكا البنجابي"
+          },
+          {
+            "en": "Chicken Hakka Noodles",
+            "ar": "نودلز هاكا بالدجاج"
+          },
+          {
+            "en": "Mutton Biryani",
+            "ar": "برياني لحم الضأن"
+          },
+          {
+            "en": "Steam Rice",
+            "ar": "أرز مطهو على البخار"
+          },
+          {
+            "en": "Assorted Breads",
+            "ar": "أنواع مختلفة من الخبز"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Desserts",
+          "ar": "الحلويات"
+        },
+        "items": [
+          {
+            "en": "Umm Ali",
+            "ar": "أم علي"
+          },
+          {
+            "en": "Rice Phirni",
+            "ar": "فيرني الأرز"
+          },
+          {
+            "en": "Fruit Cream",
+            "ar": "كريمة الفواكه"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 9,
+    "categories": [
+      {
+        "title": {
+          "en": "Iftar",
+          "ar": "الإفطار"
+        },
+        "items": [
+          {
+            "en": "Assorted Fresh Fruits",
+            "ar": "فواكه طازجة متنوعة"
+          },
+          {
+            "en": "Dates",
+            "ar": "بلح"
+          },
+          {
+            "en": "Mix Samosa (Chicken or Vegetable)",
+            "ar": "سمبوسة مشكلة (دجاج أو خضار)"
+          },
+          {
+            "en": "Kibbeh",
+            "ar": "الكبة"
+          },
+          {
+            "en": "Mix Pakoda",
+            "ar": "باكودا مشكله"
+          },
+          {
+            "en": "Spring Roll",
+            "ar": "لفائف الربيع"
+          },
+          {
+            "en": "Vimto",
+            "ar": "فيمتو"
+          },
+          {
+            "en": "Tang",
+            "ar": "تانغ"
+          },
+          {
+            "en": "Rooh Afza",
+            "ar": "روح أفزا"
+          },
+          {
+            "en": "Pineapple Juice",
+            "ar": "عصير الأناناس"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Salads",
+          "ar": "السلطات"
+        },
+        "items": [
+          {
+            "en": "Grilled Vegetable Salad",
+            "ar": "سلطة خضار مشوية"
+          },
+          {
+            "en": "Roasted Pumpkin And Feta",
+            "ar": "يقطين مشوي مع جبنة فيتا"
+          },
+          {
+            "en": "Citrus And Orange Salad",
+            "ar": "سلطة الحمضيات والبرتقال"
+          },
+          {
+            "en": "Spinach Hummus",
+            "ar": "حمص السبانخ"
+          },
+          {
+            "en": "Mexican Mango Salad",
+            "ar": "سلطة المانجو المكسيكية"
+          },
+          {
+            "en": "Zafran Special House Salad",
+            "ar": "سلطة الزعفران الخاصة"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Soup",
+          "ar": "الشوربات"
+        },
+        "items": [
+          {
+            "en": "Lemon Coriander Soup",
+            "ar": "شوربة الدجاج بالليمون والكزبرة"
+          },
+          {
+            "en": "Burnt Garlic Soup",
+            "ar": "حساء الثوم المحروق"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Starters",
+          "ar": "المقبلات"
+        },
+        "items": [
+          {
+            "en": "Banjara Kabab Chicken",
+            "ar": "كباب دجاج بانجارا"
+          },
+          {
+            "en": "Mutton Shami Kabab",
+            "ar": "كباب شامي لحم الضأن"
+          },
+          {
+            "en": "Fish Crispy",
+            "ar": "سمك مقرمش"
+          },
+          {
+            "en": "Shanghai Chicken",
+            "ar": "دجاج شانغهاي"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Main Course",
+          "ar": "الطبق الرئيسي"
+        },
+        "items": [
+          {
+            "en": "Murg Maharaja",
+            "ar": "مورغ مهراجا"
+          },
+          {
+            "en": "Haryali Gosht",
+            "ar": "هاريالي جوشت"
+          },
+          {
+            "en": "Fish in Hot Bean Sauce",
+            "ar": "سمك في صلصة الفاصوليا الحارة"
+          },
+          {
+            "en": "Dal Palak",
+            "ar": "دال بالاك"
+          },
+          {
+            "en": "Spaghetti With Meat Balls",
+            "ar": "معكرونة سباغيتي مع كرات اللحم"
+          },
+          {
+            "en": "Chicken Biryani",
+            "ar": "برياني الدجاج"
+          },
+          {
+            "en": "Steam Rice",
+            "ar": "أرز مطهو على البخار"
+          },
+          {
+            "en": "Assorted Breads",
+            "ar": "أنواع مختلفة من الخبز"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Desserts",
+          "ar": "الحلويات"
+        },
+        "items": [
+          {
+            "en": "Gulab Jamun",
+            "ar": "جولاب جامون"
+          },
+          {
+            "en": "Fruit Custard",
+            "ar": "كاسترد الفواكه"
+          },
+          {
+            "en": "Bread Pudding",
+            "ar": "بودنغ الخبز"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 10,
+    "categories": [
+      {
+        "title": {
+          "en": "Iftar",
+          "ar": "الإفطار"
+        },
+        "items": [
+          {
+            "en": "Assorted Fresh Fruits",
+            "ar": "فواكه طازجة متنوعة"
+          },
+          {
+            "en": "Dates",
+            "ar": "بلح"
+          },
+          {
+            "en": "Mix Samosa (Chicken or Vegetable)",
+            "ar": "سمبوسة مشكلة (دجاج أو خضار)"
+          },
+          {
+            "en": "Kibbeh",
+            "ar": "الكبة"
+          },
+          {
+            "en": "Mix Pakoda",
+            "ar": "باكودا مشكله"
+          },
+          {
+            "en": "Spring Roll",
+            "ar": "لفائف الربيع"
+          },
+          {
+            "en": "Vimto",
+            "ar": "فيمتو"
+          },
+          {
+            "en": "Tang",
+            "ar": "تانغ"
+          },
+          {
+            "en": "Rooh Afza",
+            "ar": "روح أفزا"
+          },
+          {
+            "en": "Lemon Mint Juice",
+            "ar": "عصير الليمون والنعناع"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Salads",
+          "ar": "السلطات"
+        },
+        "items": [
+          {
+            "en": "Avocado and Pomegranate Tabbouleh",
+            "ar": "تبولة الأفوكادو والرمان"
+          },
+          {
+            "en": "Grilled Shrimp Citrus Salad",
+            "ar": "سلطة الجمبري المشوي بالحمضيات"
+          },
+          {
+            "en": "Beetroot Tahina Salad",
+            "ar": "سلطة الشمندر بالطحينة"
+          },
+          {
+            "en": "Muttabal",
+            "ar": "متبال"
+          },
+          {
+            "en": "Aloo  Chaat",
+            "ar": "ألو تشات"
+          },
+          {
+            "en": "Zafran Special House Salad",
+            "ar": "سلطة الزعفران الخاصة"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Soup",
+          "ar": "الشوربات"
+        },
+        "items": [
+          {
+            "en": "Carrot Soup",
+            "ar": "شوربة الجزر"
+          },
+          {
+            "en": "Hot & Sour Soup (Chicken)",
+            "ar": "شوربة دجاج حارة وحامضة"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Starters",
+          "ar": "المقبلات"
+        },
+        "items": [
+          {
+            "en": "Lahori Chicken Tikka",
+            "ar": "دجاج لاهوري تيكا"
+          },
+          {
+            "en": "Mutton Arabic Kabab",
+            "ar": "كباب لحم الضأن العربي"
+          },
+          {
+            "en": "Ajwani Fish Tikka",
+            "ar": "سمك أجواني تيكا"
+          },
+          {
+            "en": "Thai Chicken",
+            "ar": "دجاج تايلاندي"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Main Course",
+          "ar": "الطبق الرئيسي"
+        },
+        "items": [
+          {
+            "en": "Rara Murg",
+            "ar": "رارا مورغ"
+          },
+          {
+            "en": "Dabba Gosht",
+            "ar": "دابا جوشت"
+          },
+          {
+            "en": "Grill Fish Mushroom Sauce",
+            "ar": "صلصة الفطر مع السمك المشوي"
+          },
+          {
+            "en": "Mango Dal",
+            "ar": "عدس المانجو"
+          },
+          {
+            "en": "Macaroni Pasta",
+            "ar": "معكرونة بالجبن"
+          },
+          {
+            "en": "Mutton Pulav",
+            "ar": "أرز باللحم الضأن"
+          },
+          {
+            "en": "Steam Rice",
+            "ar": "أرز مطهو على البخار"
+          },
+          {
+            "en": "Assorted Breads",
+            "ar": "أنواع مختلفة من الخبز"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Desserts",
+          "ar": "الحلويات"
+        },
+        "items": [
+          {
+            "en": "Cream Caramel",
+            "ar": "كريم كراميل"
+          },
+          {
+            "en": "Walnut Brownie",
+            "ar": "براوني الجوز"
+          },
+          {
+            "en": "Jelly",
+            "ar": "هلام"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 11,
+    "categories": [
+      {
+        "title": {
+          "en": "Iftar",
+          "ar": "الإفطار"
+        },
+        "items": [
+          {
+            "en": "Assorted Fresh Fruits",
+            "ar": "فواكه طازجة متنوعة"
+          },
+          {
+            "en": "Dates",
+            "ar": "بلح"
+          },
+          {
+            "en": "Mix Samosa (Chicken or Vegetable)",
+            "ar": "سمبوسة مشكلة (دجاج أو خضار)"
+          },
+          {
+            "en": "Kibbeh",
+            "ar": "الكبة"
+          },
+          {
+            "en": "Mix Pakoda",
+            "ar": "باكودا مشكله"
+          },
+          {
+            "en": "Spring Roll",
+            "ar": "لفائف الربيع"
+          },
+          {
+            "en": "Vimto",
+            "ar": "فيمتو"
+          },
+          {
+            "en": "Tang",
+            "ar": "تانغ"
+          },
+          {
+            "en": "Rooh Afza",
+            "ar": "روح أفزا"
+          },
+          {
+            "en": "Fresh Watermelon Juice",
+            "ar": "عصير البطيخ الطازج"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Salads",
+          "ar": "السلطات"
+        },
+        "items": [
+          {
+            "en": "Corn And Pomegranate Salad",
+            "ar": "سلطة الذرة والرمان"
+          },
+          {
+            "en": "Paneer Tikka Garden Salad",
+            "ar": "سلطة بانير تيكا جاردن"
+          },
+          {
+            "en": "Sweet Potato Chick Peas Salad",
+            "ar": "سلطة الحمص والبطاطا الحلوة"
+          },
+          {
+            "en": "Ten To Ten Salad",
+            "ar": "سلطة تين تو تين"
+          },
+          {
+            "en": "Channa Chaat",
+            "ar": "تشانا تشات"
+          },
+          {
+            "en": "Mix Pasta Salad",
+            "ar": "سلطة المعكرونة المشكلة"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Soup",
+          "ar": "الشوربات"
+        },
+        "items": [
+          {
+            "en": "Lemon Mint Soup",
+            "ar": "شوربة الليمون والنعناع"
+          },
+          {
+            "en": "Murg Coriander Soup",
+            "ar": "حساء دجاج دانهيا"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Starters",
+          "ar": "المقبلات"
+        },
+        "items": [
+          {
+            "en": "Mughlai Chicken Tikka",
+            "ar": "دجاج تيكا موغلاي"
+          },
+          {
+            "en": "Lamb Boti Tikka",
+            "ar": "لحم ضأن بوتي تيكا"
+          },
+          {
+            "en": "Fish Sarso Tikka",
+            "ar": "سمك سارسو تيكا"
+          },
+          {
+            "en": "Crispy Garlic Chicken",
+            "ar": "دجاج مقرمش بالثوم"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Main Course",
+          "ar": "الطبق الرئيسي"
+        },
+        "items": [
+          {
+            "en": "Murg Haryali Masala",
+            "ar": "دجاج هاريالي ماسالا"
+          },
+          {
+            "en": "Molokhia Laham",
+            "ar": "مولوخيا لحم"
+          },
+          {
+            "en": "Fish n Chips",
+            "ar": "سمك وبطاطا مقلية"
+          },
+          {
+            "en": "Dal Jaipuri",
+            "ar": "دال جايبوري"
+          },
+          {
+            "en": "Farfalle Pasta In Red Sauce",
+            "ar": "معكرونة فارفالي بصلصة الطماطم"
+          },
+          {
+            "en": "Chicken Vermicelli Rice",
+            "ar": "أرز بالدجاج والشعيرية"
+          },
+          {
+            "en": "Steam Rice",
+            "ar": "أرز مطهو على البخار"
+          },
+          {
+            "en": "Assorted Breads",
+            "ar": "أنواع مختلفة من الخبز"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Desserts",
+          "ar": "الحلويات"
+        },
+        "items": [
+          {
+            "en": "Beetroot Halwa",
+            "ar": "حلوى الشمندر"
+          },
+          {
+            "en": "Baklava",
+            "ar": "البقلاوة"
+          },
+          {
+            "en": "Gajar Ka Halwa",
+            "ar": "حلوى الجزر"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 12,
+    "categories": [
+      {
+        "title": {
+          "en": "Iftar",
+          "ar": "الإفطار"
+        },
+        "items": [
+          {
+            "en": "Assorted Fresh Fruits",
+            "ar": "فواكه طازجة متنوعة"
+          },
+          {
+            "en": "Dates",
+            "ar": "بلح"
+          },
+          {
+            "en": "Mix Samosa (Chicken or Vegetable)",
+            "ar": "سمبوسة مشكلة (دجاج أو خضار)"
+          },
+          {
+            "en": "Kibbeh",
+            "ar": "الكبة"
+          },
+          {
+            "en": "Mix Pakoda",
+            "ar": "باكودا مشكله"
+          },
+          {
+            "en": "Spring Roll",
+            "ar": "لفائف الربيع"
+          },
+          {
+            "en": "Vimto",
+            "ar": "فيمتو"
+          },
+          {
+            "en": "Tang",
+            "ar": "تانغ"
+          },
+          {
+            "en": "Rooh Afza",
+            "ar": "روح أفزا"
+          },
+          {
+            "en": "Strawberry Milkshake",
+            "ar": "ميلك شيك الفراولة"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Salads",
+          "ar": "السلطات"
+        },
+        "items": [
+          {
+            "en": "Pineapple Chicken Salad",
+            "ar": "سلطة دجاج بالأناناس"
+          },
+          {
+            "en": "Wild berry Cheese Salad",
+            "ar": "سلطة الجبن بالتوت البري"
+          },
+          {
+            "en": "Beetroot Hummus",
+            "ar": "حمص الجذور"
+          },
+          {
+            "en": "Lentil Lemon Salad",
+            "ar": "سلطة العدس بالليمون"
+          },
+          {
+            "en": "Date And Walnut Salad",
+            "ar": "سلطة التمر والجوز"
+          },
+          {
+            "en": "Quiona Herb Salad",
+            "ar": "سلطة الكينوا بالأعشاب"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Soup",
+          "ar": "الشوربات"
+        },
+        "items": [
+          {
+            "en": "Zafran Special Seafood Soup",
+            "ar": "شوربة المأكولات البحرية المشكلة"
+          },
+          {
+            "en": "Lentil Soup",
+            "ar": "شوربة العدس"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Starters",
+          "ar": "المقبلات"
+        },
+        "items": [
+          {
+            "en": "Kasturi Kabab Chicken",
+            "ar": "دجاج كاستوري كباب"
+          },
+          {
+            "en": "Mutton Cheese Kabab",
+            "ar": "كباب لحم الضأن بالجبن"
+          },
+          {
+            "en": "Apollo Fish",
+            "ar": "سمكة أبولو"
+          },
+          {
+            "en": "Sesame Chicken Strips",
+            "ar": "شرائح دجاج بالسمسم"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Main Course",
+          "ar": "الطبق الرئيسي"
+        },
+        "items": [
+          {
+            "en": "Chicken Mughlai",
+            "ar": "دجاج موغلاي"
+          },
+          {
+            "en": "Mutton Meloni",
+            "ar": "بطيخ لحم الضأن"
+          },
+          {
+            "en": "Fish Finger",
+            "ar": "أصابع السمك"
+          },
+          {
+            "en": "Rajma Raseela",
+            "ar": "راجما راسيل"
+          },
+          {
+            "en": "Hongkong Style Noodles (Chicken)",
+            "ar": "دجاج نودلز على طريقة هونغ كونغ"
+          },
+          {
+            "en": "Mutton Kabsa",
+            "ar": "موتوم كبسة"
+          },
+          {
+            "en": "Steam Rice",
+            "ar": "أرز مطهو على البخار"
+          },
+          {
+            "en": "Assorted Breads",
+            "ar": "أنواع مختلفة من الخبز"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Desserts",
+          "ar": "الحلويات"
+        },
+        "items": [
+          {
+            "en": "Rasmalai",
+            "ar": "راسمالاي"
+          },
+          {
+            "en": "Umm Ali",
+            "ar": "أم علي"
+          },
+          {
+            "en": "Moong Dal Halwa",
+            "ar": "حلوى مونج دال"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 13,
+    "categories": [
+      {
+        "title": {
+          "en": "Iftar",
+          "ar": "الإفطار"
+        },
+        "items": [
+          {
+            "en": "Assorted Fresh Fruits",
+            "ar": "فواكه طازجة متنوعة"
+          },
+          {
+            "en": "Dates",
+            "ar": "بلح"
+          },
+          {
+            "en": "Mix Samosa (Chicken or Vegetable)",
+            "ar": "سمبوسة مشكلة (دجاج أو خضار)"
+          },
+          {
+            "en": "Kibbeh",
+            "ar": "الكبة"
+          },
+          {
+            "en": "Mix Pakoda",
+            "ar": "باكودا مشكله"
+          },
+          {
+            "en": "Spring Roll",
+            "ar": "لفائف الربيع"
+          },
+          {
+            "en": "Vimto",
+            "ar": "فيمتو"
+          },
+          {
+            "en": "Tang",
+            "ar": "تانغ"
+          },
+          {
+            "en": "Rooh Afza",
+            "ar": "روح أفزا"
+          },
+          {
+            "en": "Mango Lassi",
+            "ar": "مانجو لاسي"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Salads",
+          "ar": "السلطات"
+        },
+        "items": [
+          {
+            "en": "Green Garden Salad",
+            "ar": "سلطة الحديقة الخضراء"
+          },
+          {
+            "en": "Ceaser Salad Chicken",
+            "ar": "دجاج سلطة سيزر"
+          },
+          {
+            "en": "Cucumber Deluxe Salad",
+            "ar": "سلطة كاشومبر دولكس"
+          },
+          {
+            "en": "Sprout Protein Salad",
+            "ar": "سلطة بروتين البراعم"
+          },
+          {
+            "en": "Fruit Salad",
+            "ar": "سلطة فواكه"
+          },
+          {
+            "en": "Fattoush",
+            "ar": "فتوش"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Soup",
+          "ar": "الشوربات"
+        },
+        "items": [
+          {
+            "en": "Chicken Broth Soup",
+            "ar": "شوربة مرق الدجاج"
+          },
+          {
+            "en": "Spinach Soup",
+            "ar": "شوربة السبانخ"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Starters",
+          "ar": "المقبلات"
+        },
+        "items": [
+          {
+            "en": "Chicken Tikka",
+            "ar": "دجاج تيكا"
+          },
+          {
+            "en": "Mutton Bihari Kabab",
+            "ar": "كباب لحم ضأن بيهاري"
+          },
+          {
+            "en": "Fish Salt and Pepper",
+            "ar": "سمك، ملح، وبابريكا"
+          },
+          {
+            "en": "Chicken 555",
+            "ar": "دجاج 55"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Main Course",
+          "ar": "الطبق الرئيسي"
+        },
+        "items": [
+          {
+            "en": "Chicken Chat-Pata",
+            "ar": "دجاج تشات باتا"
+          },
+          {
+            "en": "Mutton Zafrani Handi",
+            "ar": "لحم ضأن زعفراني هاندي"
+          },
+          {
+            "en": "Green Fish Thai Curry",
+            "ar": "سمك أخضر بالكاري"
+          },
+          {
+            "en": "Mash Ki Dal",
+            "ar": "ماس كي دال"
+          },
+          {
+            "en": "Lasagna",
+            "ar": "اللازانيا"
+          },
+          {
+            "en": "Schezwan Fried Rice Chicken",
+            "ar": "أرز مقلي بالدجاج من سيتشوان"
+          },
+          {
+            "en": "Steam Rice",
+            "ar": "أرز مطهو على البخار"
+          },
+          {
+            "en": "Assorted Breads",
+            "ar": "أنواع مختلفة من الخبز"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Desserts",
+          "ar": "الحلويات"
+        },
+        "items": [
+          {
+            "en": "Pumpkin Halwa",
+            "ar": "حلوى اليقطين"
+          },
+          {
+            "en": "Basbosa",
+            "ar": "باسبوسا"
+          },
+          {
+            "en": "Rabdi Kheer",
+            "ar": "رابدي خير"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 14,
+    "categories": [
+      {
+        "title": {
+          "en": "Iftar",
+          "ar": "الإفطار"
+        },
+        "items": [
+          {
+            "en": "Assorted Fresh Fruits",
+            "ar": "فواكه طازجة متنوعة"
+          },
+          {
+            "en": "Dates",
+            "ar": "بلح"
+          },
+          {
+            "en": "Mix Samosa (Chicken or Vegetable)",
+            "ar": "سمبوسة مشكلة (دجاج أو خضار)"
+          },
+          {
+            "en": "Kibbeh",
+            "ar": "الكبة"
+          },
+          {
+            "en": "Mix Pakoda",
+            "ar": "باكودا مشكله"
+          },
+          {
+            "en": "Spring Roll",
+            "ar": "لفائف الربيع"
+          },
+          {
+            "en": "Vimto",
+            "ar": "فيمتو"
+          },
+          {
+            "en": "Tang",
+            "ar": "تانغ"
+          },
+          {
+            "en": "Rooh Afza",
+            "ar": "روح أفزا"
+          },
+          {
+            "en": "Kiwi Mint Fizz",
+            "ar": "كيوي مينت فيز"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Salads",
+          "ar": "السلطات"
+        },
+        "items": [
+          {
+            "en": "Indian Green Salad",
+            "ar": "سلطة خضراء هندية"
+          },
+          {
+            "en": "Watermelon Feta Salad",
+            "ar": "سلطة البطيخ والفيتا"
+          },
+          {
+            "en": "Truffle Mushroom Salad",
+            "ar": "سلطة الفطر بالكمأة"
+          },
+          {
+            "en": "Mint Cucumber Salad",
+            "ar": "سلطة الخيار بالنعناع"
+          },
+          {
+            "en": "German Potato Salad",
+            "ar": "سلطة البطاطس الألمانية"
+          },
+          {
+            "en": "Babaganoush",
+            "ar": "بابا غنوج"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Soup",
+          "ar": "الشوربات"
+        },
+        "items": [
+          {
+            "en": "Healthy Beetroot Soup",
+            "ar": "شوربة الشمندر الصحية"
+          },
+          {
+            "en": "Mutton Broth Soup",
+            "ar": "شوربة مرق لحم الضأن"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Starters",
+          "ar": "المقبلات"
+        },
+        "items": [
+          {
+            "en": "Reshmi Kabab Chicken",
+            "ar": "دجاج رشمي كباب"
+          },
+          {
+            "en": "Mutton Kanti",
+            "ar": "لحم ضأن كانتي"
+          },
+          {
+            "en": "Fish Malai Tikka",
+            "ar": "سمك ماليا تيكا"
+          },
+          {
+            "en": "Honey Crispy Chicken",
+            "ar": "دجاج مقرمش بالعسل"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Main Course",
+          "ar": "الطبق الرئيسي"
+        },
+        "items": [
+          {
+            "en": "Chicken Jalfrezi",
+            "ar": "دجاج جلفرازي"
+          },
+          {
+            "en": "Mutton Awadhi Korma",
+            "ar": "كورما لحم الضأن الأوادي"
+          },
+          {
+            "en": "Fish In Black Bean Sauce",
+            "ar": "سمك بصلصة الفاصوليا السوداء"
+          },
+          {
+            "en": "Dal Makhni With Makhana",
+            "ar": "دال ماخني مع ماخانا"
+          },
+          {
+            "en": "Fettuccelle",
+            "ar": "فيتوتشيلي"
+          },
+          {
+            "en": "Murg Yakhni Pulav",
+            "ar": "مورغ ياخني بولاف"
+          },
+          {
+            "en": "Steam Rice",
+            "ar": "أرز مطهو على البخار"
+          },
+          {
+            "en": "Assorted Breads",
+            "ar": "أنواع مختلفة من الخبز"
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Desserts",
+          "ar": "الحلويات"
+        },
+        "items": [
+          {
+            "en": "Vermicelli Kheer",
+            "ar": "فيرميسيللي خير"
+          },
+          {
+            "en": "Shahi Tukda",
+            "ar": "شاهي توكدا"
+          },
+          {
+            "en": "Cream Caramel",
+            "ar": "كريم كراميل"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 15,
+    "categories": [
+      {
+        "title": {
+          "en": "Iftar",
+          "ar": "الإفطار"
+        },
+        "items": []
+      },
+      {
+        "title": {
+          "en": "Salads",
+          "ar": "السلطات"
+        },
+        "items": []
+      },
+      {
+        "title": {
+          "en": "Soup",
+          "ar": "الشوربات"
+        },
+        "items": []
+      },
+      {
+        "title": {
+          "en": "Starters",
+          "ar": "المقبلات"
+        },
+        "items": []
+      },
+      {
+        "title": {
+          "en": "Main Course",
+          "ar": "الطبق الرئيسي"
+        },
+        "items": []
+      },
+      {
+        "title": {
+          "en": "Desserts",
+          "ar": "الحلويات"
+        },
+        "items": []
+      }
+    ]
+  }
+]
+
+
+
+
 }
