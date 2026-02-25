@@ -232,8 +232,27 @@
                 return;
             }
 
-            const diffDays = Math.floor((currentDate - RAMADAN_START) / (1000 * 60 * 60 * 24));
-            const dayIndex = diffDays % 7;
+            const diffDays = Math.floor(
+    (currentDate - RAMADAN_START) / (1000 * 60 * 60 * 24)
+);
+
+// If date is before start OR exceeds available menu days
+if (diffDays < 0 || diffDays >= fullMenu.length) {
+    document.getElementById('selected-day-name').textContent =
+        lang === 'en' ? "No Menu Available" : "لا توجد قائمة متاحة";
+
+    container.innerHTML = `
+        <div class="text-center py-20 text-gold/20 italic">
+            ${lang === 'en'
+                ? 'Menu not published for this date yet.'
+                : 'لم يتم نشر القائمة لهذا التاريخ بعد.'}
+        </div>
+    `;
+    return;
+}
+
+// Direct mapping (NO REPEAT)
+const dayIndex = diffDays;
             document.getElementById('selected-day-name').textContent = currentDate.toLocaleDateString(lang === 'en' ? 'en-US' : 'ar-SA', { weekday: 'long' });
             
             container.innerHTML = '';
